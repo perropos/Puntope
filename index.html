@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Punto Pe - Actualidad Política</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'theme-bg': '#f2f2f2', // Light grey/beige background from template
+              'theme-dark': '#333333', // Dark charcoal for headers/sections
+              'theme-accent': '#e0e0e0', // Lighter grey for accents
+              'theme-text': '#111111', // Almost black text
+              'peru-red': '#d62828', // Kept for specific accents (flag color) but used sparingly
+            },
+            fontFamily: {
+              sans: ['Open Sans', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+            },
+            borderRadius: {
+              '4xl': '2.5rem',
+              '5xl': '3rem',
+            },
+            boxShadow: {
+              'soft': '0 20px 50px rgba(0,0,0,0.05)',
+              'card': '0 10px 30px rgba(0,0,0,0.08)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        color: #333;
+        font-family: 'Open Sans', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      /* Markdown Styles adapted for the new theme */
+      .markdown-content h1 {
+         font-family: 'Montserrat', sans-serif;
+         font-weight: 900;
+         color: #333;
+         font-size: 2.5rem;
+         line-height: 1.1;
+         margin-bottom: 1.5rem;
+         letter-spacing: -0.02em;
+      }
+      .markdown-content h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-top: 2.5rem;
+        margin-bottom: 1.25rem;
+        color: #333;
+      }
+      .markdown-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+        font-size: 1.05rem;
+      }
+      .markdown-content ul {
+        list-style-type: none; /* Custom bullets in code */
+        padding-left: 0;
+        margin-bottom: 2rem;
+      }
+      .markdown-content strong {
+        font-weight: 700;
+        color: #111;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #e0e0e0;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 3px;
+      }
+
+      /* Scroll Reveal Animations */
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+      .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
